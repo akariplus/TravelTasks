@@ -10,6 +10,8 @@ public class ScannerMinigameHandler : MonoBehaviour
     Transform Card;
     public float Progress = 0;
     bool Finished = false;
+    bool LoadingNew = false;
+    SceneHandler sceneHandler;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,7 @@ public class ScannerMinigameHandler : MonoBehaviour
         Scanner = GameObject.Find("Scanner").GetComponent<Transform>();
         ScannerSlider = GameObject.Find("ScannerSlider");
         Card = GameObject.Find("Card").GetComponent<Transform>();
+        sceneHandler = GetComponent<SceneHandler>(); 
     }
 
     // Update is called once per frame
@@ -42,6 +45,11 @@ public class ScannerMinigameHandler : MonoBehaviour
                 Debug.Log("Finished");
                 Finished = true;
             }
+        }
+        else if (!LoadingNew)
+        { 
+            LoadingNew = true;
+            StartCoroutine(sceneHandler.FinishedMinigame());
         }
         else
         {
