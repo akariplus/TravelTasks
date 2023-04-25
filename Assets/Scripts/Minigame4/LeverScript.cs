@@ -17,7 +17,6 @@ public class LeverScript : MonoBehaviour, IPointerDownHandler
     {
         if (LeverPulled == false)
         {
-            Debug.Log("ÖnPointerDown");
             LeverPulled = true;
             CurrentImg.sprite = LeverDown;
         }
