@@ -9,12 +9,15 @@ public class pump : MonoBehaviour
     public Slider air_slider;
     public Slider timer_slider;
     public Transform Pump;
+    public Animator animator;
+    public Transform player;
     public float air = 0f;
     public Vector2 mouse_y;
     public float previous_y;
     public float y_change;
     public float timer = 0f;
     public bool done = false;
+    public bool is_done = false;
     private void Start()
     {
 
@@ -24,10 +27,13 @@ public class pump : MonoBehaviour
     {
         if (!done)
         {
+            //set timer
             timer += 1 * Time.deltaTime;
 
+            //move pump shape
             Pump.position = new Vector3(6, Input.mousePosition.y / 200 - 3, 0);
 
+            //set previous y
             y_change = Input.GetAxis("Mouse Y") - previous_y;
 
             //Check if y movement down
@@ -51,10 +57,26 @@ public class pump : MonoBehaviour
                 done = true;
             }
 
-            //set valeus
+            //set slider
             air_slider.value = air;
             timer_slider.value = timer;
+
+            //set previous
             previous_y = Input.GetAxis("Mouse Y");
+        }
+
+        //set Animations and move player
+        if (done)
+        {
+            if (!is_done)
+            {
+                animator.SetTrigger("get_on");
+                is_done = true;
+            }
+            else
+            {
+                animator.SetTrigger("drive");
+            }
         }
     }
 }
