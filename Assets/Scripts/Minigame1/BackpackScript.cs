@@ -23,7 +23,6 @@ public class BackpackScript : MonoBehaviour, IDropHandler
 
         if (eventData.pointerDrag != null)
         {
-            Debug.Log("Dropped Item");
             eventData.pointerDrag.GetComponent<DragDropItem>().Packed = true;
         }
         int count = 0;

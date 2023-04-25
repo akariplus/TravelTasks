@@ -5,6 +5,8 @@ using UnityEngine;
 public class GlobalData : MonoBehaviour
 {
     public static string LastMinigame;
+    public static int CompletedMinigames;
+
     public static int Lives;
     public static float TimerSpeed;
 }
