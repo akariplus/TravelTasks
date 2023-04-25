@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpaceBarMovement : MonoBehaviour
 {
-    public Animator ani;
+    float speed = 30f;
 
-    public float speed;
+    public Animator ani;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,9 @@ public class SpaceBarMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             transform.position += transform.right * Time.deltaTime * speed;
+            ani.ResetTrigger("isIdle");
+            ani.SetTrigger("isRunning");
+                    
         }
     }
 }

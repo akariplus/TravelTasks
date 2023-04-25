@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public SceneManager SceneManager;
+
+    public Animator ani;
+
     public bool timerOn = false;
     public float timeLeft;
     
@@ -35,12 +38,13 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has ended");
                 timeLeft = 0;
                 timerOn = false;
+                ani.SetTrigger("isFalling");
             }
         }
 
         if(Player.position.x > end.position.x)
         {
-            Debug.Log("HELP");
+            Debug.Log("it works!");
             timerOn= false;
 
         }
