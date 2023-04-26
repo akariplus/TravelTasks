@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpaceBarMovement : MonoBehaviour
 {
-    float speed = 30f;
+    float speed = 20f;
 
     public Animator ani;
 
