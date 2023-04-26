@@ -27,6 +27,7 @@ public class BackpackScript : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<DragDropItem>().Packed = true;
+            eventData.pointerDrag.SetActive(false);
         }
         int count = 0;
         foreach (DragDropItem item in Items)

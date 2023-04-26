@@ -18,7 +18,6 @@ public class DragDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
-        Packed = false;
     }
     public void OnDrag(PointerEventData eventData)
     {
