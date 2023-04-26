@@ -34,17 +34,6 @@ public class HeartScript : MonoBehaviour
         {
             sceneHandler.LoadScene("GameOverScreen");
         }
-        else if (!LoadingNew)
-        {
-            StartCoroutine(LoadNewMinigame());
-            LoadingNew = true;
-        }
     }
 
-
-    private IEnumerator LoadNewMinigame()
-    {
-        yield return new WaitForSeconds(3);
-        sceneHandler.LoadRandomScene();
-    }
 }

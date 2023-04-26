@@ -26,7 +26,18 @@ public class SceneHandler : MonoBehaviour
         Debug.Log("FinishedMinigame");
         GlobalData.CompletedMinigames++;
         yield return new WaitForSeconds(2);
-        LoadRandomScene();
+        if (GlobalData.Lives == 0)
+        {
+            LoadScene("GameOverScreen");
+        }
+        else if (GlobalData.CompletedMinigames == 15)
+        {
+            LoadScene("WinScreen");
+        }
+        else
+        {
+            LoadRandomScene();
+        }
     }
 
     public void LoadScene(string name)

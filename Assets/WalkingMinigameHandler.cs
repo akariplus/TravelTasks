@@ -8,6 +8,7 @@ public class WalkingMinigameHandler : MonoBehaviour
     RectTransform Player, EndTrigger;
     SceneHandler sceneHandler;
     bool Finished;
+    GameObject Timer;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class WalkingMinigameHandler : MonoBehaviour
         Player = GameObject.Find("Player").GetComponent<RectTransform>();
         EndTrigger = GameObject.Find("EndTrigger").GetComponent<RectTransform>();
         sceneHandler = GetComponent<SceneHandler>();
+        Timer = GameObject.Find("TimerCanvas");
     }
 
     // Update is called once per frame
@@ -23,7 +25,8 @@ public class WalkingMinigameHandler : MonoBehaviour
         if (Player.anchoredPosition.x >= EndTrigger.anchoredPosition.x && !Finished)
         {
             Finished = true;
-            sceneHandler.FinishedMinigame();
+            Timer.SetActive(false);
+            StartCoroutine(sceneHandler.FinishedMinigame());
         }
     }
 }

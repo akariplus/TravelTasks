@@ -48,7 +48,7 @@ public class pump : MonoBehaviour
             //reduse air
             if (air > 0)
             {
-                air -= 0.1f;
+                air -= 0.025f;
             }
 
             //check if done
