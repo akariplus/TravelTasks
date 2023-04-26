@@ -23,6 +23,7 @@ public class SceneHandler : MonoBehaviour
 
     public IEnumerator FinishedMinigame()
     {
+        Debug.Log("FinishedMinigame");
         GlobalData.CompletedMinigames++;
         yield return new WaitForSeconds(2);
         LoadRandomScene();

@@ -7,13 +7,16 @@ using UnityEngine.EventSystems;
 public class BackpackScript : MonoBehaviour, IDropHandler
 {
 
-    public Minigamehandler Handler;
+    public Minigamehandler minigameHandler;
+    public CutsceneHandler cutsceneHandler;
     public GameObject itemHolder;
     public DragDropItem[] Items;
+    public GameObject BackpackBase, BackpackInside, BackpackFlap;
 
     private void Start()
     {
-        Handler = GameObject.Find("Game").GetComponent<Minigamehandler>();
+        minigameHandler = GameObject.Find("Game").GetComponent<Minigamehandler>();
+        cutsceneHandler = GameObject.Find("Canvas").GetComponent<CutsceneHandler>();
         itemHolder = GameObject.Find("ItemHolder");
         Items = itemHolder.GetComponentsInChildren<DragDropItem>();
 }
@@ -33,6 +36,13 @@ public class BackpackScript : MonoBehaviour, IDropHandler
                 count++;
             }
         }
-        Handler.Packed = count;
+        minigameHandler.Packed = count;
+    }
+    public void Finish()
+    {
+        BackpackBase.SetActive(false);
+        BackpackInside.SetActive(false);
+        BackpackFlap.SetActive(false);
+        itemHolder.SetActive(false);
     }
 }

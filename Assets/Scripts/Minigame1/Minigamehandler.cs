@@ -8,37 +8,31 @@ public class Minigamehandler : MonoBehaviour
 
     public int ToBePacked = 4;
     public int Packed = 0;
-    private TMP_Text textField;
-    public bool Finished = false;
-    private SceneHandler sceneHandler;
-    private bool LoadingNew;
+    public bool Finished, PlayedCutscene = false;
+    private BackpackScript backpackScript;
+    private CutsceneHandler cutsceneHandler;
 
 
     private void Start()
     {
-        textField = GameObject.Find("GameHeader").GetComponent<TMP_Text>();
-        sceneHandler = GetComponent<SceneHandler>();
+        backpackScript = GameObject.Find("Backpack").GetComponent<BackpackScript>();
+        cutsceneHandler = GameObject.Find("Canvas").GetComponent<CutsceneHandler>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (!Finished)
+        if (!Finished && !PlayedCutscene)
         {
-            if (Packed == ToBePacked && !Finished)
+            if (Packed == ToBePacked)
             {
                 Finished = true;
+                backpackScript.Finish();
+                cutsceneHandler.PlayEndCutscene();
+                PlayedCutscene = true;
             }
         }
-        else if (!LoadingNew)
-        {
-            LoadingNew = true;
-            StartCoroutine(sceneHandler.FinishedMinigame());
-        }
-        else
-        {
-
-        }
     }
+
 }
