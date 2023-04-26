@@ -5,7 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Mini3/Scenes/MainMenu.unity
+    guid: 5baf3d26180ed454ba294aa2e08888bc
+  - enabled: 1
+    path: Assets/Mini3/Scenes/Mini1.unity
+    guid: 1ce3829c693450b46ab6defed48e2dc5
+  - enabled: 1
+    path: Assets/Mini3/Scenes/Mini2.unity
+    guid: ca60ba3b847dc564d87a8f0a32ef4d7b
+  - enabled: 1
+    path: Assets/Mini3/Scenes/Mini3.unity
+    guid: 08539f48221abe44fb0d7e0054431738
+  - enabled: 1
+    path: Assets/Mini3/Scenes/Mini4.unity
+    guid: 97d5a0e1078e6484796f03bd552baf1f
+  - enabled: 1
+    path: Assets/Mini3/Scenes/Mini5.unity
+    guid: 4122e850ca237154da490adec4c6ac44
+  - enabled: 1
+    path: Assets/Mini3/Scenes/GameOverScreen.unity
+    guid: 9403666c521689a468265081e3145e01
+  - enabled: 1
+    path: Assets/Mini3/Scenes/WinScreen.unity
+    guid: ce3d83e1df17b68498238d4a7bc7bf0c
   m_configObjects: {}

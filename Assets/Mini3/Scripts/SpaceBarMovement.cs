@@ -21,8 +21,7 @@ public class SpaceBarMovement : MonoBehaviour
         {
             transform.position += transform.right * Time.deltaTime * speed;
             ani.ResetTrigger("isIdle");
-            ani.SetTrigger("isRunning");
-                    
+            ani.SetTrigger("isRunning");            
         }
     }
 }
