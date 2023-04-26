@@ -64,19 +64,5 @@ public class pump : MonoBehaviour
             //set previous
             previous_y = Input.GetAxis("Mouse Y");
         }
-
-        //set Animations and move player
-        if (done)
-        {
-            if (!is_done)
-            {
-                animator.SetTrigger("get_on");
-                is_done = true;
-            }
-            else
-            {
-                animator.SetTrigger("drive");
-            }
-        }
     }
 }
