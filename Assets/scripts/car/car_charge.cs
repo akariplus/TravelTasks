@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class car_charge : MonoBehaviour
 {
     public Slider slider;
-    public float charge = 0f; 
+    public float charge = 0f;
+    public bool done = false;
     void Update()
     {
         if (charge < 1)
@@ -16,6 +17,10 @@ public class car_charge : MonoBehaviour
             {
                 charge += 0.025f;
             }
+        }
+        if (charge > 1)
+        {
+            done = true;
         }
     }
 }
