@@ -4,27 +4,22 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class LeverScript : MonoBehaviour, IPointerDownHandler
+public class LeverScript : MonoBehaviour
 {
 
-    public Sprite LeverUp;
     public Sprite LeverDown;
     public bool LeverPulled = false;
     public Image CurrentImg;
 
-
-    public void OnPointerDown(PointerEventData eventData)
+    private void Start()
     {
-        if (LeverPulled == false)
-        {
-            LeverPulled = true;
-            CurrentImg.sprite = LeverDown;
-        }
-        else
-        {
-            LeverPulled = false;
-            CurrentImg.sprite = LeverUp;
-        }
+        CurrentImg = gameObject.GetComponentInChildren<Image>();
+    }
+
+    public void OnClick()
+    {
+        LeverPulled = true;
+        CurrentImg.sprite = LeverDown;
 
     }
 }

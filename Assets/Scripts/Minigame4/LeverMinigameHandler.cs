@@ -9,13 +9,14 @@ public class LeverMinigameHandler : MonoBehaviour
     bool Finished;
     private bool LoadingNew;
     SceneHandler sceneHandler;
+    CutsceneHandler cutsceneHandler;
 
     // Start is called before the first frame update
     void Start()
     {
-        Lever = GameObject.Find("LeverPlaceholder").GetComponent<LeverScript>();
+        Lever = GameObject.Find("LeverHolder").GetComponent<LeverScript>();
         sceneHandler = GetComponent<SceneHandler>();
-
+        cutsceneHandler = GameObject.Find("Canvas").GetComponent<CutsceneHandler>();
     }
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class LeverMinigameHandler : MonoBehaviour
         else if (!LoadingNew)
         {
             LoadingNew = true;
-            StartCoroutine(sceneHandler.FinishedMinigame());
+            cutsceneHandler.PlayEndCutscene(4);
         }
     }
 }

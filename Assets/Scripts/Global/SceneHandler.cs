@@ -28,4 +28,9 @@ public class SceneHandler : MonoBehaviour
         yield return new WaitForSeconds(2);
         LoadRandomScene();
     }
+
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 }

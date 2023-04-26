@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Mini6.unity
     guid: 4ba71b160fc29f644b31d1f5388f36db
   - enabled: 1
+    path: Assets/Scenes/FailMinigame.unity
+    guid: 839aad1ced3d3b744854aaf7e73d68a3
+  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: ce3d83e1df17b68498238d4a7bc7bf0c
   - enabled: 1

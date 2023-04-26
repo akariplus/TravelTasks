@@ -5,7 +5,7 @@ using UnityEngine;
 public class CutsceneHandler : MonoBehaviour
 {
 
-    public GameObject GameWindow, CutsceneWindow;
+    public GameObject GameWindow, CutsceneWindow, Timer;
     public Animator anim;
     public SceneHandler sceneHandler;
 
@@ -13,17 +13,19 @@ public class CutsceneHandler : MonoBehaviour
     {
         GameWindow = GameObject.Find("Game");
         CutsceneWindow = GameObject.Find("CutsceneWindow");
+        Timer = GameObject.Find("TimerCanvas");
         anim = GameObject.Find("Cutscene").GetComponent<Animator>();
         sceneHandler = gameObject.GetComponent<SceneHandler>();
         CutsceneWindow.SetActive(false);
     }
 
 
-    public void PlayEndCutscene()
+    public void PlayEndCutscene(int Minigame)
     {
         GameWindow.SetActive(false);
         CutsceneWindow.SetActive(true);
-        anim.SetTrigger("PlayWinCutscene");
+        Timer.SetActive(false);
+        anim.SetTrigger("PlayWinCutscene" + Minigame);
     }
 
 }

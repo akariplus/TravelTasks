@@ -7,6 +7,6 @@ public class GlobalData : MonoBehaviour
     public static string LastMinigame;
     public static int CompletedMinigames;
 
-    public static int Lives;
-    public static float TimerSpeed;
+    public static int Lives = 3;
+    public static float TimerTime = 7.5f;
 }

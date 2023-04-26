@@ -5,7 +5,6 @@ using TMPro;
 
 public class Minigamehandler : MonoBehaviour
 {
-
     public int ToBePacked = 4;
     public int Packed = 0;
     public bool Finished, PlayedCutscene = false;
@@ -29,7 +28,7 @@ public class Minigamehandler : MonoBehaviour
             {
                 Finished = true;
                 backpackScript.Finish();
-                cutsceneHandler.PlayEndCutscene();
+                cutsceneHandler.PlayEndCutscene(1);
                 PlayedCutscene = true;
             }
         }

@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: d8713c08de39d16478ff55df2078c091
+guid: 063a813c8b361534d923cf30b37b1c3e
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 8864300324705888148
-    second: Lever Placeholder_0
-  - first:
-      213: -8503898141690970810
-    second: Lever Placeholder_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -47,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,49 +90,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Lever Placeholder_0
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 36
-        width: 90
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49769742e22540b70800000000000000
-      internalID: 8864300324705888148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lever Placeholder_1
-      rect:
-        serializedVersion: 2
-        x: 184
-        y: 0
-        width: 86
-        height: 137
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64db76a12b51cf980800000000000000
-      internalID: -8503898141690970810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
