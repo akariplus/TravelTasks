@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
 
-    string[] Minigames = new string[] { "Mini1", "Mini2", "Mini3", "Mini4", "Mini5", "Mini6" };
+    string[] Minigames = new string[] { "Mini1", "Mini2", "Mini3", "Mini4", "Mini6" };
     string[] Menus = new string[] { "MainMenu", "WinScreen", "GameOverScreen" };
 
 
